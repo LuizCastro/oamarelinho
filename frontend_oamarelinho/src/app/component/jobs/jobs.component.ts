@@ -28,7 +28,6 @@ export class JobsComponent implements OnInit {
     this.show_not_found = (this.model_jobs.length > 0 );
     this.show_alert = false;
     this.route.events.subscribe(ev => {
-      console.log(ev)
       if(ev  instanceof  NavigationStart){
         this.loading = true;
       }

@@ -101,13 +101,10 @@ html,body{width: 100%!important;}
     color: #333;
     text-decoration: none;
   }
-  footer.fixed-bottom{
-    position:unset;
-  }
   footer {
     color: black;
     /* display: inline; footer fixed*/
-    display: block!important;
+    display: inline;
     position:absolute;
     
     width: 100%;

@@ -38,9 +38,8 @@ export class JobsService {
     }
     let data = {
       title: `${title}`,
-      cityName : cityName
+      cityName : `${cityName}`,
     };
-    console.log(data);
     return this.httpClient.post<IJob[]>(`${environment.api_path}job/list-jobs`,data);
   }
   getLastJobs(){

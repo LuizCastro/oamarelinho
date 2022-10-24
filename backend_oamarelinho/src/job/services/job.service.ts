@@ -18,7 +18,8 @@ export class JobService {
     return await this.JobRepository.delete(id);
   }
   async getAll(): Promise<Job[]> {
-    return await this.JobRepository.find();
+    return await this.JobRepository.orderBy('updatedAt', 'DESC')
+    .orderBy('createdAt', 'DESC').find();
   }
   async getOne(id: number): Promise<Job> {
     return await this.JobRepository.findOne({ where: { id: id } });
