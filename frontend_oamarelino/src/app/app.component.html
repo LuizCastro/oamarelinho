@@ -1,0 +1,117 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- Toolbar -->
+<nav class="navbar fixed-top navbar-light bg-gold padding-v-15" role="banner">
+  <img
+    class="logo"
+    width="250"
+    alt="O Amarelino"
+    src="https://oamarelinho.com.br/library/images/logo.svg"
+  />
+    <div class="spacer"></div>
+    <a aria-label="O Amarelinho on twitter" target="_blank" rel="noopener" href="https://twitter.com/oamarelinho" title="Twitter">
+      <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <rect width="400" height="400" fill="none"/>
+        <path fill="black" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" fill="black"/>
+      </svg>
+    </a>
+    <a aria-label="O Amarelinho on YouTube" target="_blank" rel="noopener" href="https://youtube.com/oamarelinho" title="YouTube">
+      <svg id="youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path d="M0 0h24v24H0V0z" fill="none"/>
+        <path fill="black" d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
+      </svg>
+    </a>
+</nav>
+<div class="content">
+  <div *ngIf="loading" id="model-spinner" class="modal">
+    <div class="content" id="loading-job">
+      <div class="d-flex justify-content-center">
+          <div class="spinner-grow text-warning no-margin-l-r" role="status">
+              <span class="sr-only">Loading...</span>
+          </div><br>
+          <div class="spinner-grow text-warning no-margin-l-r" role="status">
+              <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning no-margin-l-r"  role="status">
+              <span class="sr-only">Loading...</span>
+          </div>
+      </div>
+  </div>
+  </div>
+  <app-jobs></app-jobs>
+</div>
+<footer class="fixed-bottom no-margin bg-gold">
+  <div class="row text-center no-margin bg-gold padding-t-15">
+    <div class="col-lg-3 col-sm-3">
+          <h3>Candidato</h3>
+          <ul >
+              <li >Entrar</li>
+              <li >Cadastrar</li>
+              <li >Buscar Vagas</li>
+              <li >Vagas de A a Z</li>
+          </ul>
+    </div>
+    <div class="col-lg-3 col-sm-3">
+        <h3>Institucional</h3>
+        <ul>
+            <li >Como Funciona </li>
+            <li >Fale Conosco </li>
+            <li >Termos de Uso </li>
+            <li >Política de Privacidade </li>
+            <li >Publicidade no Site</li>
+        </ul>
+    </div>
+    <div class="col-lg-3 col-sm-3">
+        <h3>Empregador</h3>
+        <ul>
+            <li >Anunciar vaga </li>
+        </ul>
+    </div>
+    <div class="col-lg-3 col-sm-3">
+      <h3>Siga-nos</h3>
+      <ul class="center-text socialmedia">
+        <li>
+          <a aria-label="O Amarelinho on twitter" target="_blank" rel="noopener" href="https://www.facebook.com/OAmarelinhoo" title="Facebook">
+            <svg id="footer-facebook-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+              <path fill="black" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+              c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+              V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+              C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+              c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z" fill="black"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a aria-label="O Amarelinho on twitter" target="_blank" rel="noopener" href="https://pt.linkedin.com/company/o-amarelinho" title="LinkedIn">
+            <svg id="footer-linkedin-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+              <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73C77.16,101.969,74.922,99.73,72.16,99.73z"/>
+	            <path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
+	            <path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995C310,145.43,300.549,94.761,230.454,94.761z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a aria-label="O Amarelinho on twitter" target="_blank" rel="noopener" href="https://twitter.com/OAmarelinho" title="Twitter">
+            <svg id="footer-twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+              <path fill="black" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" fill="black"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a aria-label="O Amarelinho on YouTube" target="_blank" rel="noopener" href="https://youtube.com/oamarelinho" title="YouTube">
+            <svg id="footer-youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+              <path d="M0 0h24v24H0V0z" fill="none"/>
+              <path fill="black" d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

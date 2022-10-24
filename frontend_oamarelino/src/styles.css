@@ -1,0 +1,254 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v84/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUcel5euIg.woff2)
+      format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Material Icons Filled";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v113/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+  }
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+html,body{width: 100%!important;}
+  p {
+    margin: 0;
+  }
+  .padding-v-15{
+    padding: 10px 15px 10px 15px;
+  }
+  .padding-t-15{
+    padding-top: 15px;
+  }
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: initial;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: gold;
+    color: black;
+    font-weight: 600;
+    
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+    
+  }
+  
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+  a,
+  a:visited,
+  a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  footer.fixed-bottom{
+    position:unset;
+  }
+  footer {
+    color: black;
+    /* display: inline; footer fixed*/
+    display: block!important;
+    position:absolute;
+    
+    width: 100%;
+    /* position: unset; */
+    height: auto;
+    bottom: 0;
+  }
+  footer ul {
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 10px 0px;
+    display: inline;
+    text-align: center;
+  }
+  footer ul li{
+    list-style-type: none;
+  }
+  footer ul li a {
+    /* 
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    */
+    display:block;  /* added */
+  }
+  footer ul.socialmedia {
+    display: inline-flex;
+  }
+  footer ul.socialmedia li{
+    padding: 1%;
+    margin: 1%;
+    display: block;
+  }
+  .col-centered {
+    margin: 0 auto;
+    float: none;
+  }
+  .no-margin-l-r{
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+  }
+  .font-size-20{
+    font-size: 20px;
+  }
+  .border-radius-5{
+    border-radius: 5px!important;
+  }
+  .border-gold{
+    border: 1px solid gold;
+  }
+  button .border-radius-icon{
+    border-radius: 5px!important;
+  }
+  input .border-radius-icon{
+    border-radius: 5px 0px 5px 0px!important;
+  }
+  
+  .no-margin{
+    margin: 0px!important;
+  }
+  .no-pádding-l-r{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+
+  footer h3{
+    font-size: 1.17em;
+    margin: 0;
+    padding: 0;
+    text-align: center
+  }
+  .bg-gold{
+    background-color: gold;
+  }
+  .content{
+    margin-bottom: 200px;
+  }
+  .w-100{
+    width: 100%;
+  }
+  .btn-primary {
+    --bs-btn-color: black;
+    --bs-btn-bg: gold;
+    --bs-btn-border-color: gold;
+    --bs-btn-hover-color: black;
+    --bs-btn-hover-bg: gold;
+    --bs-btn-hover-border-color: gold;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: black;
+    --bs-btn-active-bg: gold;
+    --bs-btn-active-border-color: gold;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: black;
+    --bs-btn-disabled-bg: gold;
+    --bs-btn-disabled-border-color:gold;
+    --bs-btn-hover-bg:black;
+    --bs-btn-hover-color:gold;
+    --bs-btn-color: black;
+    --bs-btn-bg: gold;
+    --bs-btn-border-color: black;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: black;
+    --bs-btn-hover-border-color: black;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: gold;
+    --bs-btn-active-bg: black;
+    --bs-btn-active-border-color: black;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: gold;
+    --bs-btn-disabled-bg: black;
+    --bs-btn-disabled-border-color: black;
+}
+  .dropdown-menu {
+    --bs-dropdown-border-radius: 0px 0px 5px 5px;
+    width: 100%;
+    --bs-dropdown-color:black;
+    --bs-dropdown-bg:gold;
+    --bs-dropdown-color: #212529;
+    --bs-dropdown-link-color: #212529;
+    --bs-dropdown-link-hover-color: #1e2125;
+    --bs-dropdown-link-active-bg: black;
+    --bs-dropdown-link-disabled-color: black;
+    --bs-dropdown-header-color: #6c757d;
+    --bs-dropdown-border-color: black;
+    color: var(--bs-dropdown-color);
+    background-color: var(--bs-dropdown-bg);
+    border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+    border-radius: var(--bs-dropdown-border-radius);
+}
+@media only screen and (max-width: 700px) {
+    footer {
+        position: unset!important;
+        padding: auto;
+    }
+    .twitter-logo{
+        width: 28px;
+    }
+    .logo{
+        width: 100px;
+    }
+    .content{
+        margin-bottom: 20px;
+        min-width: 270px;
+    }
+  }

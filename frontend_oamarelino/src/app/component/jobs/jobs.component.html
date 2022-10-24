@@ -1,0 +1,84 @@
+<div class="row" id="banner-job">
+    <img class="no-margin-l-r no-pádding-l-r"  height="auto" width="100%" src="/assets/images/banner-01.png">
+</div>
+
+<form (submit)="getJobs()">
+    <div class="row">
+        <div class="col-lg-5 col-md-5">
+            <div class="input-group">
+                <input style="width: 83%;border-color:black" class="form-control border-right-0 border-gold" placeholder="Digite a vaga que procura"
+                id="typeahead-format-job-title"
+                [(ngModel)]="model_job_title"
+                [ngModelOptions]="{standalone: true}"
+                [ngbTypeahead]="getGroupByTitle"
+                [resultFormatter]="formatter_job_title"
+                >
+                <span class="input-group-append bg-white border-left-0" style="border-color:black;border: 1px solid black;
+                border-radius: 0px 5px 5px 0px;">
+                    <span class="input-group-text bg-gold">
+                        <i class="fa fa-search font-size-20"></i>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5">
+            <div class="input-group">
+                <input style="width: 83%;border-color:black" class="form-control border-right-0 border-radius-icon"
+                id="typeahead-format-job-cityName"
+                placeholder="Digite o local da vaga"
+                [(ngModel)]="model_job_cityName"
+                [ngModelOptions]="{standalone: true}"
+                [ngbTypeahead]="getGroupByCityName"
+                [resultFormatter]="formatter_job_cityName"
+                >
+                <span class="input-group-append bg-white border-left-0" style="border-color:black;border: 1px solid black;
+                border-radius: 0px 5px 5px 0px;">
+                    <span class="input-group-text bg-gold" style="width: 42px;">
+                        <i class="fa fa-map-marker font-size-20"></i>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2">
+            <button class="btn btn-primary border-radius-icon w-100" type="submit" style="font-size: 12px;
+            height: 38px;">Buscar Vagas</button>
+        </div>
+    </div>
+</form>
+<div class="row"> 
+    <div *ngIf="loading" class="alert alert-info" role="alert">
+        spinner
+    </div>
+    <div *ngIf="show_alert" class="alert alert-info" role="alert">
+        Para realizar a pesquisa por favor preencher um dos campos acima.
+    </div>
+
+    <div class="text-center" *ngIf="model_jobs.length <= 0">
+        <h3>Não foram encontradas vagas para a pesquisa realizada ;(</h3>
+    </div>
+
+    <div *ngIf="model_jobs.length > 0" class="text-center" >
+        Encontramos {{model_jobs.length}} vaga(s) para sua pesquisa
+    </div>
+    <div class="col-lg-4 col-md-6 padding-v-15" *ngFor="let job of model_jobs">
+        <div class="card">
+            <div class="card-header text-center">
+                <div class="header-company-job">
+                    <img class="logo-company-job" src="/assets/images/no-logo-company.png">
+                    <h5 class="card-title companyName">{{job.Job_companyName}}</h5>
+                </div>
+            </div>
+            <div class="card-body">
+            <h5 class="card-title title">{{job.Job_title}}</h5>
+            <p class="card-text cityName-stateName"><small class="text-muted" style="color: gold;">{{job.Job_cityName}}/{{job.Job_stateName}}</small></p>
+            <br>
+            <p class="card-text description">{{job.Job_description}}</p>
+            <br>
+            <p class="card-text createdAt"><small class="text-muted"  style="color: gold;">Vaga Publicada  em: {{job.Job_createdAt | date :  "dd/MM/yyyy HH:mm"}}</small></p>
+            <p class="card-text updatedAt"><small class="text-muted"  style="color: gold;">Vaga Atualizada em: {{job.Job_updatedAt | date :  "dd/MM/yyyy HH:mm" }}</small></p>
+            <br>
+            <a href="#" class="btn btn-primary w-100 padding-v-15">Ver a Vaga</a>
+            </div>
+        </div>
+    </div>
+</div>

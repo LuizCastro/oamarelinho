@@ -1,0 +1,49 @@
+
+span.input-group-addon {
+  background-color: gold;
+  width: 35px;
+  font-size: 22px;
+  border-radius: 0px 0px 5px 0px;
+  padding: 2px;
+  margin: 0 auto;
+}
+#banner-job{
+    max-width: 700px;
+    margin: -25px auto 20px auto;
+}
+img.banner-input {
+  height: auto;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  max-width: 700px;
+  display: inline-block;
+}
+.header-company-job{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.logo-company-job{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 1px solid rgb(204, 204, 204);
+}
+#banner-job-card{
+    /* border: 2px solid gold; */
+}
+@media only screen and (max-width: 700px) {
+    #banner-job{
+        margin: -32px auto 20px 0px;    
+    }
+    
+}
+@media only screen and (max-width: 360px) {
+    #typeahead-format, #typeahead-format-local{
+        width: 200px;    
+    }
+
+    
+}
